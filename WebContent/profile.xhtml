@@ -67,6 +67,15 @@
 								action="#{userBean.logout}" value="Logout" /></li>
 					</h:form>
 				</ul>
+                
+				<ul class="nav navbar-nav navbar-right" style="padding-right: 50px;">
+					<h:form id="navForm2">
+                        <li class="page-scroll"><h:commandLink
+								action="#{userBean.nodejs}" value="Node.js" /></li>
+                        <li class="page-scroll"><h:commandLink
+								action="#{userBean.vertx}" value="Vert.x" /></li>
+					</h:form>
+				</ul>
 			</div>
 		</div>
 	</nav>
