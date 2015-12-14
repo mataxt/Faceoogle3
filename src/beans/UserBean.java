@@ -126,6 +126,13 @@ public class UserBean implements Serializable {
 		}
 	}
 
+	public String nodejs() {
+		return "nodejs.xhtml?faces-redirect=true" + "&user=" + username;
+	}
+	
+	public String vertx() {
+		return "vertx.xhtml?faces-redirect=true" + "&user=" + username;
+	}
 
 	public String logout() {
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
