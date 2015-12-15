@@ -26,48 +26,7 @@
 	<script src="UI/js/jquery.js"></script>
 
 	<script src="UI/js/bootstrap.min.js"></script>
-	<script
-		src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(scrollToBottom);
-		function scrollToBottom() {
-			$("#chatForm\\:chatBox_content").addClass(
-					"ui-widget-content-scrollable");
-			(jQuery("#chatForm\\:chatBox_content"))
-					.scrollTop(((jQuery("#chatForm\\:chatBox_content"))[0].scrollHeight + 1));
-		}
-	</script>
-	<script type="text/javascript">
-		var scrollPosition;
-		function saveScrollPosition() {
-			scrollPosition = (jQuery("#chatForm\\:chatBox_content"))
-					.scrollTop();
-		}
-
-		function setScrollPosition() {
-			$("#chatForm\\:chatBox_content").addClass(
-					"ui-widget-content-scrollable");
-			(jQuery("#chatForm\\:chatBox_content")).scrollTop(scrollPosition);
-		}
-	</script>
-	<script type="text/javascript">
-		function clearInput() {
-			$('#contactForm\\:message').val('');
-		}
-	</script>
-    <script type="text/javascript">
-		$(function() {
-		
-		var loc = window.location.toString(),
-		params = loc.split('?')[1],
-		iframe = document.getElementById('myIframe');
-		
-		alert(iframe.src); 
-		iframe.src = iframe.src + '?' + params;
-		alert(iframe.src); 
-		
-		});
-	</script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 </h:head>
 
 <h:body id="page-top" class="index">
@@ -146,8 +105,19 @@
 					</h:form>
 				</div>
                 
-                <div id="chatDiv" class="col-lg-7 ">
-					<iframe id="myIframe" src="http://130.237.84.211:8880/index.html" width="650" height="400" scrolling="yes"></iframe>
+                <script type="text/javascript">
+					$(function() {
+		
+					var loc = window.location.toString(),
+					params = loc.split('?')[1],e
+					iframe = document.getElementById('myframe');
+		
+					iframe.src = iframe.src + '?' + params;
+					});
+				</script>
+                
+                <div id="chatDiv" class="col-lg-7">
+					<iframe id="myframe" name="myframe" src="http://130.237.84.211:8880" width="650" height="400" scrolling="yes"></iframe>
 				</div>
 
 				<div class="col-lg-2">
